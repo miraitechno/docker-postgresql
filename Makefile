@@ -1,10 +1,10 @@
 # Substitute your own docker index username, if you like.
-DOCKER_USER=paintedfox
+DOCKER_USER=miraitechno
 
 # Change this to suit your needs.
 NAME:=postgresql
 USER:=super
-PASS:=$(shell pwgen -s -1 16)
+PASS:=$(shell mkpasswd -l 16)
 DATA_DIR:=/tmp/postgresql
 PORT:=127.0.0.1:5432
 

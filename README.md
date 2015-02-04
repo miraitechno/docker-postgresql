@@ -51,8 +51,8 @@ $ docker run -d --name="postgresql" \
              -v /tmp/postgresql:/data \
              -e USER="super" \
              -e DB="database_name" \
-             -e PASS="$(pwgen -s -1 16)" \
-             paintedfox/postgresql
+             -e PASS="$(mkpasswd -l 16)" \
+             miraitechno/postgresql
 ```
 
 Alternately, you can run the following if you have *make* installed...
